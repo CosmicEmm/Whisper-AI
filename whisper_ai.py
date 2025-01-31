@@ -3,6 +3,7 @@ from sys import argv
 import os
 import logging
 
+
 # Configure logging to display messages with timestamps and log levels (required otherwise logs won't display)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
