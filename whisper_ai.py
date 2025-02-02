@@ -31,7 +31,7 @@ logging.info("Model loaded!")
 
 # Perform the transcription
 logging.info('Transcription in process... Have some patience!')
-result = model.transcribe(input_file_path)
+result = model.transcribe(input_file_path, language='english')
 logging.info('Transcription process completed!')
 
 # Write the transcribed text to the output file
