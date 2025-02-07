@@ -11,12 +11,16 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 if len(argv) < 2:
     logging.error("No filename provided. Please provide the filename you want to transcribe.")
     exit(1)
+if len(argv) < 3:
+    logging.error("No extension provided. Please provide the file extension as well.")
+    exit(1)
 
-# Retrieve the filename from the command-line arguments
+# Retrieve the filename and extension from the command-line arguments
 filename = argv[1]
+extension = argv[2]
 
 # Construct the full path to the input file
-input_file_path = os.path.join(r'F:\Audit and Assurance', f'{filename}.ts')
+input_file_path = os.path.join(r'F:\Whisper Queue', f'{filename}.{extension}')
 
 # Define the output directory where the transcript will be saved
 output_dir = r'G:\My Drive\Repos\Whisper\Transcripts'
